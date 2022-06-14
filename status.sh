@@ -8,9 +8,6 @@
 thermal_zone0=$(</sys/class/thermal/thermal_zone0/temp)
 cpu=$((thermal_zone0/1000))
 
-#Read GPU temperatur
-#echo "GPU => $(/opt/vc/bin/vcgencmd measure_temp)"
-
 #Flag Bits
 UNDERVOLTED=0x1
 CAPPED=0x2
