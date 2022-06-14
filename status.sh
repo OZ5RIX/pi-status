@@ -4,7 +4,6 @@
 # Author: OZ5RIX
 # -------------------------------------------------------
 
-echo ""
 #Read CPU temperatur
 thermal_zone0=$(</sys/class/thermal/thermal_zone0/temp)
 cpu=$((thermal_zone0/1000))
@@ -35,6 +34,7 @@ BAD="${RED}YES${NC}"
 STATUS=$(vcgencmd get_throttled)
 STATUS=${STATUS#*=}
 
+echo ""
 echo "$(date) @ $(hostname)"
 echo -n "Uptime: "
 echo "$(uptime -p | cut -d " " -f2-)"
